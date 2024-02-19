@@ -301,6 +301,33 @@
     });
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+    var sections = document.querySelectorAll('section');
+    var navLinks = document.querySelectorAll('.nav-link');
+  
+    function highlightNavLink() {
+      var scrollPosition = window.scrollY;
+  
+      sections.forEach(function(section) {
+        var sectionTop = section.offsetTop;
+        var sectionHeight = section.clientHeight;
+  
+        if (scrollPosition >= sectionTop - sectionHeight / 3) {
+          var sectionId = section.getAttribute('id');
+          navLinks.forEach(function(link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href').slice(1) === sectionId) {
+              link.classList.add('active');
+            }
+          });
+        }
+      });
+    }
+  
+    window.addEventListener('scroll', highlightNavLink);
+  });
+  
+
 
    /* Placeholder Plugin Settings
     * ------------------------------------------------------ */
