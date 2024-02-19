@@ -280,29 +280,26 @@
 
    /* Smooth Scrolling
     * ------------------------------------------------------ */
-    var clSmoothScroll = function() {
-        
-        $('.smoothscroll').on('click', function (e) {
-            var target = this.hash,
-            $target    = $(target);
-            
-                e.preventDefault();
-                e.stopPropagation();
+   var clSmoothScroll = function() {
+    $('.smoothscroll').on('click', function (e) {
+        var target = this.hash,
+        $target    = $(target);
 
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, cfg.scrollDuration, 'swing').promise().done(function () {
+        e.preventDefault();
+        e.stopPropagation();
 
-                // check if menu is open
-                if ($('body').hasClass('menu-is-open')) {
-                    $('.header-menu-toggle').trigger('click');
-                }
-
-                window.location.hash = target;
-            });
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, cfg.scrollDuration, 'swing').promise().done(function () {
+            // check if menu is open
+            if ($('body').hasClass('menu-is-open')) {
+                $('.header-menu-toggle').trigger('click');
+            }
+            // Remove this line to prevent hash from being added to the URL
+            // window.location.hash = target;
         });
-
-    };
+    });
+};
 
 
    /* Placeholder Plugin Settings
