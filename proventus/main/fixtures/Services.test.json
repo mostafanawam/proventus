@@ -1,0 +1,56 @@
+[
+  {
+    "model": "main.services",
+    "pk": 1,
+    "fields": {
+      "title": "Brand Identity",
+      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+      "icon": "icon-paint-brush"
+    }
+  },
+  {
+    "model": "main.services",
+    "pk": 2,
+    "fields": {
+      "title": "Illustration",
+      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.\r\n                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+      "icon": "icon-group"
+    }
+  },
+  {
+    "model": "main.services",
+    "pk": 3,
+    "fields": {
+      "title": "Marketing",
+      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.\r\n                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+      "icon": "icon-megaphone"
+    }
+  },
+  {
+    "model": "main.services",
+    "pk": 4,
+    "fields": {
+      "title": "Web Design",
+      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.\r\n                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+      "icon": "icon-earth"
+    }
+  },
+  {
+    "model": "main.services",
+    "pk": 5,
+    "fields": {
+      "title": "Packaging Design",
+      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.\r\n                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+      "icon": "icon-cube"
+    }
+  },
+  {
+    "model": "main.services",
+    "pk": 6,
+    "fields": {
+      "title": "Web Development",
+      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.\r\n                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
+      "icon": "icon-lego-block"
+    }
+  }
+]
