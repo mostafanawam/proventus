@@ -12,20 +12,5 @@
             "groups": [],
             "user_permissions": []
         }
-    },
-    {
-        "model": "main.user",
-        "pk": 2,
-        "fields": {
-            "is_superuser": true,
-            "email": "petsnclaws2023@gmail.com",
-            "password": "pbkdf2_sha256$600000$rGbbobcXCAhPDuKX6q92Ll$YgwVLH+engWJKq+czYRMvOlu0Kj1qXaDePo1+J6sT+0=",
-            "date_joined": "2023-09-20T18:14:14.318Z",
-            "last_login": "2023-09-20T18:14:14.318Z",
-            "is_staff": true,
-            "is_enabled": true,
-            "groups": [],
-            "user_permissions": []
-        }
     }
 ]
