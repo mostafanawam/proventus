@@ -44,9 +44,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
 </head>
 
-
-
-
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -101,21 +98,14 @@
                 <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
     
                 <ul class="header-nav__social">
-                    <li>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-behance"></i></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                    </li>
+                    {% for link in links %}
+                        <li>
+                            <a href="{{link.url}}"><i class="{{link.icon}}"></i></a>
+                        </li>
+                    {% endfor %}
+                
+             
+                
                 </ul>
 
             </div> <!-- end header-nav__content -->
@@ -173,21 +163,15 @@
 
 
         <ul class="home-social">
+
+            {% for link in links %}
             <li>
-                <a href="#0"><i class="fab fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+                <a href="{{link.url}}"><i class="{{link.icon}}" aria-hidden="true"></i><span>{{link.name}}</span></a>
             </li>
-            <li>
-                <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
-            </li>
-            <li>
-                <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
-            </li>
-            <li>
-                <a href="#0"><i class="fab fa-behance" aria-hidden="true"></i><span>Behance</span></a>
-            </li>
-            <li>
-                <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
-            </li>
+        {% endfor %}
+
+
+        
         </ul> 
         <!-- end home-social -->
 
@@ -208,10 +192,7 @@
         <div class="row about-desc" data-aos="fade-up">
             <div class="col-full">
                 <p>
-                    We are a company that combines digital magic with creative flair! 🌟 We are located in the vibrant heart of London,
-                     and we are not just another digital solutions provider - we can be your dynamic partners in success! 🚀 Our team of 
-                     Proventeers will help you in navigating the constantly evolving digital 
-                    landscape and guide you to unleash the full potential of your business. 
+                    {{company.about}}
                 </p>
             </div>
         </div> <!-- end about-desc -->
@@ -263,7 +244,7 @@
                     </div>
                     <div class="service-text">
                         <h3 class="h2">{{service.title}}</h3>
-                        <p>{{service.description}}
+                        <p style="font-size:1.7rem">{{service.description}}
                         </p>
                     </div>
                 </div>
@@ -354,42 +335,36 @@
                     <div class="cinfo">
                         <h5>Where to Find Us</h5>
                         <p>
-                            Stanmore, London
+                            {{company.address}}
+
                         </p>
                     </div>
 
                     <div class="cinfo">
                         <h5>Email Us At</h5>
                         <p>
-                            hello@proventus-solutions.com
+                            {{company.email}}
+
                         </p>
                     </div>
 
                     <div class="cinfo">
                         <h5>Call Us At</h5>
                         <p>
-                            Phone: (+63) 555 1212<br>
-                            Mobile: (+63) 555 0100<br>
-                            Fax: (+63) 555 0101
+                            {{company.phone}}
                         </p>
                     </div>
 
                     <ul class="contact-social">
+
+                    {% for link in links %}
+             
                         <li>
-                            <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                            <a href="{{link.url}}"><i class="{{link.icon}}" aria-hidden="true"></i></a>
                         </li>
-                        <li>
-                            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-behance" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
-                        </li>
+
+                    {% endfor %}
+            
                     </ul> <!-- end contact-social -->
 
                 </div> <!-- end contact-info -->
@@ -404,13 +379,12 @@
     ================================================== -->
     <footer>
 
-        <div class="row footer-main">
+        <div class="row footer-main ">
 
-            <div class="col-six tab-full left footer-desc">
+            <div class="col-six tab-full left footer-desc text-white">
 
                 <div class="footer-logo"></div>
-                Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Quaerat voluptas autem necessitatibus vitae aut.
-
+            {{company.about}}
             </div>
 
             <div class="col-six tab-full right footer-subscribe">
@@ -439,7 +413,7 @@
                 </div>
 
                 <div class="go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                    <a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-arrow-up" aria-hidden="true"></i></a>
                 </div>
             </div>
 

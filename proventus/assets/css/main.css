@@ -80,15 +80,13 @@ html, body {
 body {
     background: #111111;
     font-family: "lora-regular", serif;
-    font-size: 1.7rem;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.765;
-    color: #757575;
+
     margin: 0;
     padding: 0;
 }
-
+.text-white{
+    color: white !important;
+}
 /* ------------------------------------------------------------------- 
  * ## bootstrap
  * ------------------------------------------------------------------- */
@@ -2053,13 +2051,13 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-social i {
-    font-size: 14px;
+    font-size: 18px;
     right: 0;
     text-align: center;
     display: inline-block;
     width: 33px;
     height: 33px;
-    line-height: calc(33px - 4px);
+    /* line-height: calc(33px - 4px); */
     border: 2px solid #FFFFFF;
     border-radius: 50%;
 }
@@ -3477,7 +3475,7 @@ footer a:hover, footer a:focus, footer a:active {
 }
 
 footer .row {
-    max-width: 980px;
+    max-width: 75%;
 }
 
 
@@ -3498,13 +3496,13 @@ footer .row {
 
 .footer-logo {
     display: block;
-    margin: -.6rem 0 3.6rem 0;
+    margin: -.6rem 0 2rem 0;
     padding: 0;
     outline: 0;
     border: none;
     width: 85px;
     height: 28px;
-    background: url("../images/logo-footer.png") no-repeat center;
+    background: url("../logo/logo-white.png") no-repeat center;
     background-size: 85px 28px;
     font: 0/0 a;
     text-shadow: none;

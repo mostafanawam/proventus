@@ -3,54 +3,50 @@
     "model": "main.services",
     "pk": 1,
     "fields": {
-      "title": "Brand Identity",
-      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
-      "icon": "icon-paint-brush"
+      "title": "Multimedia Design",
+      "description": "Enhance brand visibility with captivating logos, branding, and digital art designed to engage your audience effectively.",
+      "icon": "fas fa-palette",
+      "index": 2
     }
   },
   {
     "model": "main.services",
     "pk": 2,
     "fields": {
-      "title": "Illustration",
-      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.\r\n                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
-      "icon": "icon-group"
+      "title": "Digital Marketing",
+      "description": "Boost your online presence with SEO, digital ads, email campaigns, and analytics for measurable results and increased visibility.",
+      "icon": "fas fa-rocket",
+      "index": 3
     }
   },
   {
     "model": "main.services",
     "pk": 3,
     "fields": {
-      "title": "Marketing",
-      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.\r\n                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
-      "icon": "icon-megaphone"
+      "title": "Digital Support & Insights",
+      "description": "Boost productivity with remote assistance for digital tasks. Gain valuable insights through data analysis, driving informed decisions for business growth.",
+      "icon": "fas fa-laptop",
+      "index": 4
     }
   },
   {
     "model": "main.services",
     "pk": 4,
     "fields": {
-      "title": "Web Design",
-      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.\r\n                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
-      "icon": "icon-earth"
-    }
-  },
-  {
-    "model": "main.services",
-    "pk": 5,
-    "fields": {
-      "title": "Packaging Design",
-      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.\r\n                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
-      "icon": "icon-cube"
+      "title": "Engineering Solutions",
+      "description": "Ensure precision in projects with accurate engineering drawings, including floor maps and basic & complex layouts. From construction to technical projects, our team delivers quality designs tailored to your needs.",
+      "icon": "fas fa-truck-pickup",
+      "index": 5
     }
   },
   {
     "model": "main.services",
     "pk": 6,
     "fields": {
-      "title": "Web Development",
-      "description": "Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit ipsum laudantium. \r\n                    Quo delectus est. Maiores voluptas ab sit natus veritatis ut. Debitis nulla cumque veritatis.\r\n                    Sunt suscipit voluptas ipsa in tempora esse soluta sint.",
-      "icon": "icon-lego-block"
+      "title": "Web & App Development",
+      "description": "Craft user-friendly websites and apps optimized for search engines, ensuring your online presence stands out.",
+      "icon": "fas fa-globe",
+      "index": 1
     }
   }
 ]

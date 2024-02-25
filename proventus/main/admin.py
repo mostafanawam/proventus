@@ -4,8 +4,20 @@ from main.forms import CustomUserCreationForm
 from .models import *
 
 class ServicesAdmin(admin.ModelAdmin):  
-    list_display = ("id","title",'icon')
+    list_display = ("id","title",'icon','index')
 admin.site.register(Services,ServicesAdmin)
+
+
+
+class SocialLinksAdmin(admin.ModelAdmin):  
+    list_display = ("id","name",'icon','url')
+admin.site.register(SocialLinks,SocialLinksAdmin)
+
+
+
+class CompanyAdmin(admin.ModelAdmin):  
+    list_display = ("id","address",'phone',"email")
+admin.site.register(Company,CompanyAdmin)
 
 
 admin.site.unregister(Group)

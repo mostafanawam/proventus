@@ -1,0 +1,20 @@
+[
+  {
+    "model": "main.sociallinks",
+    "pk": 1,
+    "fields": {
+      "name": "Facebook",
+      "icon": "fab fa-facebook",
+      "url": "#"
+    }
+  },
+  {
+    "model": "main.sociallinks",
+    "pk": 2,
+    "fields": {
+      "name": "Instagram",
+      "icon": "fab fa-instagram",
+      "url": "#"
+    }
+  }
+]

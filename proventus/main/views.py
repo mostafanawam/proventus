@@ -4,8 +4,12 @@ from .models import *
 
 
 def main_page(request):
-    sevices=Services.objects.all()
+    sevices=Services.objects.all().order_by('index')
+    company=Company.objects.first()
+    links=SocialLinks.objects.all()
     context={
-        "services":sevices
+        "services":sevices,
+        "company":company,
+        "links":links
     }
     return render(request, 'index.html', context)

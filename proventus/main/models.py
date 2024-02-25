@@ -10,12 +10,40 @@ class Services(models.Model):
     title = models.CharField(max_length=100,unique=True)
     description = models.TextField(null=True,blank=True)
     icon=models.CharField(max_length=50)
+    index=models.IntegerField(default=1)
 
     def __str__(self):
         return self.title
     
     class Meta:
         verbose_name_plural = "Services"
+
+
+# python manage.py dumpdata main.Company --output main/fixtures/Company.test.json
+class Company(models.Model):
+    about = models.TextField()
+    address = models.TextField()
+    phone=models.CharField(max_length=50)
+    email=models.EmailField()
+
+    def __str__(self):
+        return f"{self.pk}"
+    
+    class Meta:
+        verbose_name_plural = "Company"
+
+# python manage.py dumpdata main.SocialLinks --output main/fixtures/SocialLinks.test.json
+
+class SocialLinks(models.Model):
+    name = models.CharField(max_length=100,unique=True,default="facebook")
+    icon = models.CharField(max_length=100,default="fab fa-facebook",unique=True,)
+    url=models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+    
+    class Meta:
+        verbose_name_plural = "Social Links"
 
 
 class UserAccountManager(BaseUserManager):
