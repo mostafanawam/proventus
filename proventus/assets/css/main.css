@@ -160,11 +160,15 @@ body {
     display: none;
 }
 
+
+
 /* Small screens (sm) */
 @media only screen and (max-width: 768px) {
     .display-small{
         display: block;
     }
+
+    
 }
   
   /* Medium screens (md) */
@@ -173,6 +177,8 @@ body {
     .display-small{
         display: none;
     }
+
+    
     
   }
   
@@ -1573,7 +1579,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     padding: 0;
     outline: 0;
     border: none;
-    width: 80px;
+    width: 20rem;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
@@ -1837,6 +1843,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     .header-logo {
         left: 30px;
     }
+ 
     .header-menu-toggle {
         right: 25px;
     }
