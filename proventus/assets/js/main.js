@@ -287,7 +287,6 @@
 
         e.preventDefault();
         e.stopPropagation();
-
         $('html, body').stop().animate({
             'scrollTop': $target.offset().top
         }, cfg.scrollDuration, 'swing').promise().done(function () {
@@ -301,7 +300,7 @@
     });
 };
 
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     var sections = document.querySelectorAll('section');
     var navLinks = document.querySelectorAll('.nav-link');
   
@@ -326,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     window.addEventListener('scroll', highlightNavLink);
   });
-  
+  */
 
 
    /* Placeholder Plugin Settings
