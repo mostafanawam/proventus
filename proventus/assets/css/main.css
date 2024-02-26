@@ -1679,8 +1679,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     display: inline-block;
 }
 
-.header-nav__social li a {
-    color: rgba(255, 255, 255, 0.15);
+.header-nav__social li a i {
+    /* color: rgba(255, 255, 255, 0.15); */
+    color: white;
 }
 
 .header-nav__social li a:hover,

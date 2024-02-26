@@ -95,12 +95,12 @@
                     <li><a class="smoothscroll nav-link"   href="#contact" title="contact">Contact </a></li>
                 </ul>
     
-                <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+                {% comment %} <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p> {% endcomment %}
     
                 <ul class="header-nav__social">
                     {% for link in links %}
                         <li>
-                            <a href="{{link.url}}"><i class="{{link.icon}}"></i></a>
+                            <a href="{{link.url}}"><i class="{{link.icon}}" ></i></a>
                         </li>
                     {% endfor %}
                 
