@@ -3633,9 +3633,9 @@ footer .row {
     text-decoration: none;
     border: 0 none;
     display: block;
-    height: 60px;
-    width: 60px;
-    line-height: 60px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
     text-align: center;
     background: black;
     /* color: rgba(255, 255, 255, 0.5); */
@@ -3702,8 +3702,8 @@ footer .row {
         display: none;
     }
     .go-top {
-        right: 0;
-        bottom: 0;
+        bottom: 30px;
+        right: 30px;
     }
 }
 
