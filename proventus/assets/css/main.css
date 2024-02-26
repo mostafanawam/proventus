@@ -738,17 +738,18 @@ select {
     display: block;
     height: 6rem;
     padding: 1.5rem 0;
-    border: 0;
+    /* border: 1px solid red; */
     outline: none;
     color: #333333;
     font-family: "montserrat-light", sans-serif;
     font-size: 1.4rem;
-    line-height: 3rem;
+    /* line-height: 3rem; */
     max-width: 100%;
-    background: transparent;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    background: white;
+    /* border-bottom: 2px solid rgba(0, 0, 0, 0.15); */
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    border-radius: 5px;
 }
 
 .cl-custom-select {
@@ -821,7 +822,7 @@ input[type="password"]:focus,
 textarea:focus,
 select:focus {
     color: #000000;
-    border-bottom: 2px solid black;
+    /* border-bottom: 2px solid black; */
 }
 
 label, legend {
@@ -3158,9 +3159,11 @@ html.no-csstransitions .home-content__main {
 .contact-content input[type="password"],
 .contact-content textarea,
 .contact-content select {
-    color: rgba(255, 255, 255, 0.6);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    /* color: rgba(255, 255, 255, 0.6); */
+    color: black;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.07); */
     margin-bottom: .9rem;
+    padding: 10px;
 }
 
 .contact-content input[type="email"]:focus,
@@ -3172,8 +3175,9 @@ html.no-csstransitions .home-content__main {
 .contact-content input[type="password"]:focus,
 .contact-content textarea:focus,
 .contact-content select:focus {
-    color: #FFFFFF;
-    border-bottom: 1px solid var(--main);
+    /* color: #FFFFFF; */
+    color: black;
+    border: 2px solid var(--main);
 }
 
 .contact-content button,
@@ -3184,31 +3188,42 @@ html.no-csstransitions .home-content__main {
 .contact-content input::-webkit-input-placeholder,
 .contact-content select::-webkit-input-placeholder,
 .contact-content textarea::-webkit-input-placeholder {
-    color: #4f4f4f;
+    /* color: #4f4f4f; */
+     /* color: #FFFFFF; */
+     color: black;
 }
 
 .contact-content input:-moz-placeholder,
 .contact-content select:-moz-placeholder,
 .contact-content textarea:-moz-placeholder {
-    color: #4f4f4f;    /* Firefox 18- */
+    /* color: #4f4f4f;   */
+      /* color: #FFFFFF; */
+      color: black;
+
 }
 
 .contact-content input::-moz-placeholder,
 .contact-content select::-moz-placeholder,
 .contact-content textarea::-moz-placeholder {
-    color: #4f4f4f;    /* Firefox 19+ */
+
+       /* color: #FFFFFF; */
+       color: black;
 }
 
 .contact-content input:-ms-input-placeholder,
 .contact-content select:-ms-input-placeholder,
 .contact-content textarea:-ms-input-placeholder {
-    color: #4f4f4f;
+    /* color: #4f4f4f; */
+        /* color: #FFFFFF; */
+        color: black;
 }
 
 .contact-content input.placeholder,
 .contact-content select.placeholder,
 .contact-content textarea.placeholder {
-    color: #4f4f4f !important;
+    /* color: #4f4f4f !important; */
+       /* color: #FFFFFF; */
+       color: black; 
 }
 .contact-primary, .contact-secondary {
     float: left;
@@ -3604,6 +3619,7 @@ footer .row {
 
 .footer-bottom .copyright span {
     display: inline-block;
+    color: var(--main);
 }
 
 .footer-bottom .copyright span::after {
