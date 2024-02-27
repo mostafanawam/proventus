@@ -286,6 +286,7 @@
                 <h3 class="h4">Send Us A Message</h3>
 
                 <form name="contactForm" id="contactForm"  novalidate="novalidate">
+                    {% csrf_token %}
                     <fieldset>
     
                     <div class="form-field">
@@ -301,7 +302,7 @@
                         <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
                     </div>
                     <div class="form-field">
-                        <button class="full-width btn--primary">Submit</button>
+                        <button class="full-width btn--primary"  type="button" id="submitContact">Submit</button>
                         <div class="submit-loader">
                             <div class="text-loader">Sending...</div>
                             <div class="s-loader">

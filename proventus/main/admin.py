@@ -7,6 +7,10 @@ class ServicesAdmin(admin.ModelAdmin):
     list_display = ("id","title",'icon','index')
 admin.site.register(Services,ServicesAdmin)
 
+class ContactUsAdmin(admin.ModelAdmin):  
+    list_display = ("id","name","email","subject")
+admin.site.register(ContactUs,ContactUsAdmin)
+
 
 
 class SocialLinksAdmin(admin.ModelAdmin):  

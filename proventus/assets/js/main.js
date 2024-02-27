@@ -348,56 +348,56 @@
 
    /* Contact Form
     * ------------------------------------------------------ */
-    var clContactForm = function() {
+    // var clContactForm = function() {
         
-        /* local validation */
-        $('#contactForm').validate({
+    //     /* local validation */
+    //     $('#contactForm').validate({
         
-            /* submit via ajax */
-            submitHandler: function(form) {
+    //         /* submit via ajax */
+    //         submitHandler: function(form) {
     
-                var sLoader = $('.submit-loader');
+    //             var sLoader = $('.submit-loader');
     
-                $.ajax({
+    //             $.ajax({
     
-                    type: "POST",
-                    url: "inc/sendEmail.php",
-                    data: $(form).serialize(),
-                    beforeSend: function() { 
+    //                 type: "POST",
+    //                 url: "inc/sendEmail.php",
+    //                 data: $(form).serialize(),
+    //                 beforeSend: function() { 
     
-                        sLoader.slideDown("slow");
+    //                     sLoader.slideDown("slow");
     
-                    },
-                    success: function(msg) {
+    //                 },
+    //                 success: function(msg) {
     
-                        // Message was sent
-                        if (msg == 'OK') {
-                            sLoader.slideUp("slow"); 
-                            $('.message-warning').fadeOut();
-                            $('#contactForm').fadeOut();
-                            $('.message-success').fadeIn();
-                        }
-                        // There was an error
-                        else {
-                            sLoader.slideUp("slow"); 
-                            $('.message-warning').html(msg);
-                            $('.message-warning').slideDown("slow");
-                        }
+    //                     // Message was sent
+    //                     if (msg == 'OK') {
+    //                         sLoader.slideUp("slow"); 
+    //                         $('.message-warning').fadeOut();
+    //                         $('#contactForm').fadeOut();
+    //                         $('.message-success').fadeIn();
+    //                     }
+    //                     // There was an error
+    //                     else {
+    //                         sLoader.slideUp("slow"); 
+    //                         $('.message-warning').html(msg);
+    //                         $('.message-warning').slideDown("slow");
+    //                     }
     
-                    },
-                    error: function() {
+    //                 },
+    //                 error: function() {
     
-                        sLoader.slideUp("slow"); 
-                        $('.message-warning').html("Something went wrong. Please try again.");
-                        $('.message-warning').slideDown("slow");
+    //                     sLoader.slideUp("slow"); 
+    //                     $('.message-warning').html("Something went wrong. Please try again.");
+    //                     $('.message-warning').slideDown("slow");
     
-                    }
+    //                 }
     
-                });
-            }
+    //             });
+    //         }
     
-        });
-    };
+    //     });
+    // };
 
 
    /* Animate On Scroll
@@ -449,6 +449,107 @@
     };
 
 
+    var submitContact = function() {
+
+
+
+        $('#submitContact').on('click', function(e) {
+            e.preventDefault();
+            var fullname = $("#contactName").val();
+            var email = $("#contactEmail").val();
+            var subject = $("#contactSubject").val();
+            var message = $("#contactMessage").val();
+           
+        
+            function isValidEmail(email) {
+                const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                return emailRegex.test(email);
+            }
+        
+
+            function validate(name, subject, email, message) {
+                if (name === "" || !/[a-zA-Z]/.test(name)) {
+                    return "Name field is required."
+                }
+                if (!isValidEmail(email)) {
+                    return "Please enter a valid email."
+                }
+                if (subject === "" || !/[a-zA-Z]/.test(subject)) {
+                    return "Subject field is required."
+                }
+        
+        
+                if (message === "") {
+                    return "Message field is required."
+        
+                }
+        
+                return ""
+            }
+
+
+            $.ajaxSetup({
+                beforeSend: function(xhr, settings) {
+                    if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                        // Only send the token to relative URLs i.e. locally
+                        xhr.setRequestHeader("X-CSRFToken", $('input[name="csrfmiddlewaretoken"]').val());
+                    }
+                }
+            });
+
+            var errors = validate(fullname, subject, email, message)
+            if (errors === "") {
+
+            $('#submitContact').html("Submitting <i class='fa fa-spinner fa-spin'></i>")
+            $('#submitContact').prop('disabled', true);
+
+            $.ajax({
+                type: 'POST',
+                url: '/contact-us/',
+                data: {
+                    'fullname': fullname,
+                    'email': email,
+                    'subject': subject,
+                    'message': message,
+                },
+                success: function(data) {
+                    if (data.result == "success") {
+
+                        $('.message-warning').fadeOut();
+                        $('#contactForm').fadeOut();
+                        $('.message-success').fadeIn();
+
+                        // $('#alert_errors').addClass('hidden')
+                        $('#submitContact').html("Submit")
+                        $('#submitContact').prop('disabled', false);
+
+                        $("#contactName").val("");
+                        $("#contactEmail").val("");
+                        $("#contactSubject").val("");
+                        $("#contactMessage").val("");
+                
+                    }
+                    else {
+                        $('.message-warning').html(data.msg);
+                        $('.message-warning').slideDown("slow");
+                    }
+                },
+                error: function() {
+                    $('.message-warning').html("Something went wrong. Please try again.");
+                    $('.message-warning').slideDown("slow");
+                }
+            });
+
+        } else {
+            $('.message-warning').html(errors);
+            $('.message-warning').slideDown("slow");
+        }
+
+        }); 
+
+    };
+
+
    /* Back to Top
     * ------------------------------------------------------ */
     var clBackToTop = function() {
@@ -484,10 +585,11 @@
         clSmoothScroll();
         clPlaceholder();
         clAlertBoxes();
-        clContactForm();
+        // clContactForm();
         clAOS();
         clAjaxChimp();
         clBackToTop();
+        submitContact()
 
     })();
         

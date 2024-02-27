@@ -3,7 +3,17 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager,Group
 from django.contrib.auth.models import PermissionsMixin,Permission
 
 
-
+class ContactUs(models.Model):
+    name=models.CharField(max_length=50)
+    email=models.CharField(max_length=100)
+    subject=models.CharField(max_length=50)
+    message=models.TextField()
+    def __str__(self):
+        return self.name 
+    class Meta:
+        verbose_name = "Contact Us"
+        verbose_name_plural = "Contact Us"
+        
 # python manage.py dumpdata main.Services --output main/fixtures/Services.test.json
 
 class Services(models.Model):
