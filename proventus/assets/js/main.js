@@ -579,9 +579,9 @@
         clMenuOnScrolldown();
         clOffCanvas();
         clPhotoswipe();
-        clStatCount();
+        // clStatCount();
         clMasonryFolio();
-        clSlickSlider();
+        // clSlickSlider();
         clSmoothScroll();
         clPlaceholder();
         clAlertBoxes();
