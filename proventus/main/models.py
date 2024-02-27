@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager,Group
 from django.contrib.auth.models import PermissionsMixin,Permission
+from django.forms import ValidationError
 
 
 class ContactUs(models.Model):
@@ -9,7 +10,7 @@ class ContactUs(models.Model):
     subject=models.CharField(max_length=50)
     message=models.TextField()
     def __str__(self):
-        return self.name 
+        return self.name
     class Meta:
         verbose_name = "Contact Us"
         verbose_name_plural = "Contact Us"
@@ -35,7 +36,10 @@ class Company(models.Model):
     address = models.TextField()
     phone=models.CharField(max_length=50)
     email=models.EmailField()
-
+    def clean(self):
+        if Company.objects.exists() and not self.pk:
+            raise ValidationError("You can only have one settings instance")
+            
     def __str__(self):
         return f"{self.pk}"
     
