@@ -171,20 +171,20 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'assets')
 # Define the base URL to serve media files from
 MEDIA_URL = '/assets/'
 
-CELERY_BROKER_URL=os.getenv("CELERY_BROKER_URL", 'amqp://guest:guest@localhost:5672/')
-RESULT_BACKEND_URL=os.getenv("RESULT_BACKEND_URL", 'amqp://guest:guest@localhost:5672/')
+# CELERY_BROKER_URL=os.getenv("CELERY_BROKER_URL", 'amqp://guest:guest@localhost:5672/')
+# RESULT_BACKEND_URL=os.getenv("RESULT_BACKEND_URL", 'amqp://guest:guest@localhost:5672/')
 
-accept_content = ['json']  # Specify accepted content types (e.g., JSON)
-task_serializer = 'json'  # Task serialization format
-result_serializer = 'json'  # Result serialization format
+# accept_content = ['json']  # Specify accepted content types (e.g., JSON)
+# task_serializer = 'json'  # Task serialization format
+# result_serializer = 'json'  # Result serialization format
 
-# Concurrency settings (adjust as needed)
-CELERY_BROKER_CONNECTION_RETRY = True  # Deprecated, use the new setting below
-CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True  # Retains existing behavior on startup
- # Maximum tasks a worker can execute before it's replaced
-task_time_limit = 1200  # Maximum time a task can run (in seconds)
+# # Concurrency settings (adjust as needed)
+# CELERY_BROKER_CONNECTION_RETRY = True  # Deprecated, use the new setting below
+# CELERY_BROKER_CONNECTION_RETRY_ON_STARTUP = True  # Retains existing behavior on startup
+#  # Maximum tasks a worker can execute before it's replaced
+# task_time_limit = 1200  # Maximum time a task can run (in seconds)
 
-CELERY_broker_connection_retry_ON_STARTUP = True
+# CELERY_broker_connection_retry_ON_STARTUP = True
 
 
 
