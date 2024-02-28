@@ -6,7 +6,7 @@ test_fixtures = */fixtures/*.test.json
 static_fixtures = */fixtures/*.static.json 
 
 backend-server-start:
-	$(python) -u manage.py runserver localhost:8080
+	$(python) -u manage.py runserver localhost:8050
 
 install:
 	$(pip) install -r requirements.txt 
