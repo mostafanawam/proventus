@@ -3478,7 +3478,7 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 footer {
-    padding: 9rem 0 6rem;
+    padding: 1.5rem 0 1rem;
     font-family: "montserrat-light", sans-serif;
     font-size: 15px;
     line-height: 2;
@@ -3614,7 +3614,6 @@ footer .row {
  * ## footer bottom
  * --------------------------------------------------------------- */
 .footer-bottom {
-    margin-top: 5.4rem;
     text-align: center;
     font-size: 14px;
 }

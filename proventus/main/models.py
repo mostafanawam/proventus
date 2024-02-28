@@ -34,7 +34,7 @@ class Services(models.Model):
 class Company(models.Model):
     about = models.TextField()
     address = models.TextField()
-    phone=models.CharField(max_length=50)
+    phone=models.CharField(max_length=50,null=True,blank=True)
     email=models.EmailField()
     def clean(self):
         if Company.objects.exists() and not self.pk:

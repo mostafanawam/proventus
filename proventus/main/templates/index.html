@@ -62,10 +62,10 @@
             </a>
         </div>
       <ul class="nav">
-        <li><a class="smoothscroll nav-link active"  href="#home" >Home</a></li>
-        <li><a class="smoothscroll nav-link"  href="#about" >About</a></li>
-        <li><a class="smoothscroll nav-link"  href="#services">Services</a></li>
-        <li><a class="smoothscroll nav-link"  href="#contact">Contact</a></li>
+        {% comment %} <li><a class="smoothscroll nav-link active"  href="#home" >Home</a></li> {% endcomment %}
+        <li><a class="smoothscroll nav-link"  href="#about" >About Us</a></li>
+        <li><a class="smoothscroll nav-link"  href="#services">Our Services</a></li>
+        <li><a class="smoothscroll nav-link"  href="#contact">Contact Us</a></li>
       </ul>
     </div>
   </nav>
@@ -87,12 +87,12 @@
                 <h3>Navigation</h3>
                 
                 <ul class="header-nav__list">
-                    <li class="current"><a class="smoothscroll nav-link"   href="#home"  title="home">Home</a></li>
-                    <li><a class="smoothscroll nav-link"   href="#about" title="about">About</a></li>
-                    <li><a class="smoothscroll nav-link"   href="#services" title="services">Services</a></li>
+                    {% comment %} <li class="current"><a class="smoothscroll nav-link"   href="#home"  title="home">Home</a></li> {% endcomment %}
+                    <li><a class="smoothscroll nav-link"   href="#about" title="about">About Us</a></li>
+                    <li><a class="smoothscroll nav-link"   href="#services" title="services">Our Services</a></li>
                     <!-- <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
                     <li><a class="smoothscroll"  href="#clients" title="clients">Clients</a></li> -->
-                    <li><a class="smoothscroll nav-link"   href="#contact" title="contact">Contact </a></li>
+                    <li><a class="smoothscroll nav-link"   href="#contact" title="contact">Contact Us</a></li>
                 </ul>
     
                 {% comment %} <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p> {% endcomment %}
@@ -348,13 +348,15 @@
 
                         </p>
                     </div>
-
-                    <div class="cinfo">
-                        <h5>Call Us At</h5>
-                        <p>
-                            {{company.phone}}
-                        </p>
-                    </div>
+                    {% if company.phone %}
+                        <div class="cinfo">
+                            <h5>Call Us At</h5>
+                            <p>
+                                {{company.phone}}
+                            </p>
+                        </div>
+                    {% endif %}
+                  
 
                     <ul class="contact-social">
 
@@ -380,7 +382,7 @@
     ================================================== -->
     <footer>
 
-        <div class="row footer-main ">
+        {% comment %} <div class="row footer-main ">
 
             <div class="col-six tab-full left footer-desc text-white">
 
@@ -403,14 +405,14 @@
 
             </div>
 
-        </div> <!-- end footer-main -->
+        </div> {% endcomment %}
 
         <div class="row footer-bottom">
 
+
             <div class="col-twelve">
-                <div class="copyright">
-                    © Copyright <span>Proventus </span> 2024
-                    <!-- <span>Site Template by <a href="https://www.colorlib.com/">Colorlib</a></span>	 -->
+                <div class="copyright" style="color:white">
+                    Copyright © 2024 <span>proventus-solutions.com</span> - All Rights Reserved.
                 </div>
 
                 <div class="go-top">
@@ -418,9 +420,9 @@
                 </div>
             </div>
 
-        </div> <!-- end footer-bottom -->
+        </div> 
 
-    </footer> <!-- end footer -->
+    </footer> 
 
 
     <!-- photoswipe background
@@ -487,3 +489,4 @@
 </body>
 
 </html>
+
