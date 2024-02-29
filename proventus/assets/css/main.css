@@ -2515,7 +2515,7 @@ html.no-csstransitions .home-content__main {
     margin-bottom: .9rem;
 }
 
-.services-list .service-item h3 {
+.services-list .service-item h2 {
     margin-top: 0;
 }
 
@@ -3139,7 +3139,7 @@ html.no-csstransitions .home-content__main {
     position: relative;
 }
 
-.contact-content h3 {
+.contact-content h4 {
     margin-top: 0;
     margin-bottom: 6.6rem;
     color: #FFFFFF;
@@ -3241,6 +3241,8 @@ html.no-csstransitions .home-content__main {
 
 .contact-secondary {
     width: 35%;
+    background-color: var(--main) !important;
+
 }
 
 .contact-secondary::before {
@@ -3251,7 +3253,7 @@ html.no-csstransitions .home-content__main {
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: #121212;
+    background-color: var(--main) !important;
 }
 
 .contact-secondary .contact-info {
@@ -3260,9 +3262,16 @@ html.no-csstransitions .home-content__main {
 
 .contact-secondary .cinfo {
     margin-bottom: 4.8rem;
-    color: white;
 }
 
+.contact-secondary .cinfo h5{
+    color: black;
+
+}
+.contact-secondary .cinfo p{
+    color: white;
+
+}
 .contact-social {
     list-style: none;
     display: inline-block;
@@ -3277,12 +3286,12 @@ html.no-csstransitions .home-content__main {
 }
 
 .contact-social li a {
-    color: white;
+    color: black;
 }
 
 .contact-social li a:hover, 
 .contact-social li a:focus {
-    color: var(--main);
+    color: white;
 }
 
 .contact-social li:last-child {
@@ -3428,7 +3437,7 @@ html.no-csstransitions .home-content__main {
     }
     .contact-primary #contactForm {
         margin-top: -1.5rem;
-        margin-bottom: 7.2rem;
+        margin-bottom: 2.2rem;
     }
     .contact-secondary .hide-on-fullwidth {
         display: none;
@@ -3442,7 +3451,7 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width: 800px) {
-    .contact-content h3 {
+    .contact-content h4 {
         text-align: center;
     }
 }
@@ -3467,7 +3476,9 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 400px) {
     .contact-primary, .contact-secondary {
-        padding: 0 5px;
+        padding: 15px;
+        /* margin-top: 15px;
+        margin-bottom: 150px; */
     }
 }
 
@@ -3623,7 +3634,7 @@ footer .row {
     color: var(--main);
 }
 
-.footer-bottom .copyright span::after {
+/* .footer-bottom .copyright span::after {
     content: "|";
     display: inline-block;
     padding: 0 1rem 0 1.2rem;
@@ -3632,7 +3643,7 @@ footer .row {
 
 .footer-bottom .copyright span:last-child::after {
     display: none;
-}
+} */
 
 
 /* ------------------------------------------------------------------- 

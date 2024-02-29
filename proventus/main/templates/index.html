@@ -19,10 +19,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <meta name="description"
-    content="Discover the ultimate pet store for all your furry friends! PetsNclaws offers a wide range of pet products and expert grooming services.
-             Spoil your pets with top-quality care and supplies." >
-    <meta name="theme-color" content="#83B641">
+    <meta name="description" content="" >
+    <meta name="theme-color" content="#39b54a">
     <meta property="og:title" content="Proventus">
 
     <!-- CSS
@@ -82,10 +80,8 @@
 
         <nav class="header-nav">
             <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
-
             <div class="header-nav__content">
                 <h3>Navigation</h3>
-                
                 <ul class="header-nav__list">
                     {% comment %} <li class="current"><a class="smoothscroll nav-link"   href="#home"  title="home">Home</a></li> {% endcomment %}
                     <li><a class="smoothscroll nav-link"   href="#about" title="about">About Us</a></li>
@@ -94,22 +90,15 @@
                     <li><a class="smoothscroll"  href="#clients" title="clients">Clients</a></li> -->
                     <li><a class="smoothscroll nav-link"   href="#contact" title="contact">Contact Us</a></li>
                 </ul>
-    
-                {% comment %} <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p> {% endcomment %}
-    
+
                 <ul class="header-nav__social">
                     {% for link in links %}
                         <li>
                             <a href="{{link.url}}"><i class="{{link.icon}}" ></i></a>
                         </li>
                     {% endfor %}
-                
-             
-                
                 </ul>
-
             </div> <!-- end header-nav__content -->
-
         </nav>  <!-- end header-nav -->
 
         <a class=" header-menu-toggle " href="#0">
@@ -243,7 +232,7 @@
                         <i class="{{service.icon}}"></i>
                     </div>
                     <div class="service-text">
-                        <h3 class="h2">{{service.title}}</h3>
+                        <h2 class="h2">{{service.title}}</h2>
                         <p style="font-size:1.7rem">{{service.description}}
                         </p>
                     </div>
@@ -283,7 +272,7 @@
             
             <div class="contact-primary">
 
-                <h3 class="h4">Send Us A Message</h3>
+                <h4 class="h4">Send Us A Message</h4>
 
                 <form name="contactForm" id="contactForm"  novalidate="novalidate">
                     {% csrf_token %}
@@ -331,7 +320,7 @@
             <div class="contact-secondary">
                 <div class="contact-info">
 
-                    <h3 class="h4 hide-on-fullwidth">Contact Info</h3>
+                    <h4 class="h4 hide-on-fullwidth">Contact Info</h4>
 
                     <div class="cinfo">
                         <h5>Where to Find Us</h5>
