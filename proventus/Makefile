@@ -17,7 +17,7 @@ static:
 testing:
 	$(python) manage.py loaddata $(test_fixtures)
 
-certbot --nginx -d proventus-solutions.com
+
 
 setup:
 	$(python) manage.py makemigrations && $(python) manage.py migrate
