@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '159.65.84.206',
     'localhost',
-    'proventus-solutions.com'
+    'proventus-solutions.com',
+    'www.proventus-solutions.com'
 ]
 
 
