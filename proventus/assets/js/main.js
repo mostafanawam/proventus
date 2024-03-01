@@ -512,6 +512,9 @@
                     'subject': subject,
                     'message': message,
                 },
+                headers: {
+                    'Origin': 'https://www.proventus-solutions.com'
+                },
                 success: function(data) {
                     if (data.result == "success") {
 
@@ -530,17 +533,23 @@
                 
                     }
                     else {
+                        $('#submitContact').html("Submit")
+                        $('#submitContact').prop('disabled', false);
                         $('.message-warning').html(data.msg);
                         $('.message-warning').slideDown("slow");
                     }
                 },
                 error: function() {
+                    $('#submitContact').html("Submit")
+                    $('#submitContact').prop('disabled', false);
                     $('.message-warning').html("Something went wrong. Please try again.");
                     $('.message-warning').slideDown("slow");
                 }
             });
 
         } else {
+            $('#submitContact').html("Submit")
+            $('#submitContact').prop('disabled', false);
             $('.message-warning').html(errors);
             $('.message-warning').slideDown("slow");
         }
