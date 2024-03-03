@@ -97,7 +97,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     username=models.CharField(max_length=100,unique=True)
     email = models.EmailField(max_length=250, unique=True,null=True,blank=True)
     password = models.CharField(max_length=250,null=True,blank=True)
-    date_joined = models.DateTimeField(verbose_name='date joined',auto_now_add=True,null=True,blank=True)
     last_login = models.DateTimeField(verbose_name='last login',auto_now_add=True,null=True,blank=True)
     is_staff = models.BooleanField(default=False,null=True,blank=True)    # admin
     is_enabled = models.BooleanField(default=True,null=True,blank=True)
