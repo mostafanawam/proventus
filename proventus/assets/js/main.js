@@ -469,17 +469,21 @@
 
             function validate(name, subject, email, message) {
                 if (name === "" || !/[a-zA-Z]/.test(name)) {
+                    $("#contactName").focus();
                     return "Name field is required."
                 }
                 if (!isValidEmail(email)) {
+                    $("#contactEmail").focus()
                     return "Please enter a valid email."
                 }
                 if (subject === "" || !/[a-zA-Z]/.test(subject)) {
+                    $("#contactSubject").focus()
                     return "Subject field is required."
                 }
         
         
                 if (message === "") {
+                    $("#contactMessage").focus()
                     return "Message field is required."
         
                 }
@@ -496,6 +500,10 @@
                     }
                 }
             });
+
+
+            // Mar 03 20:15:24 debian-s-1vcpu-1gb-lon1-01 bash[56776]: Forbidden (Origin checking failed - https://www.proventu>
+
 
             var errors = validate(fullname, subject, email, message)
             if (errors === "") {
