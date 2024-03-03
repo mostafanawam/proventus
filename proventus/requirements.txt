@@ -6,3 +6,4 @@ psycopg2-binary==2.9.5
 django-celery-results==2.5.1
 django-filter==23.3
 django-jazzmin==2.6.0
+django-cors-headers
