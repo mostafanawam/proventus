@@ -1936,9 +1936,10 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-content__main {
-    padding-top: 10rem;
+    padding-top: 24rem;
     position: relative;
 }
+
 
 .home-content__buttons {
     padding-top: 1rem;
