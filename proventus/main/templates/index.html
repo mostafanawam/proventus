@@ -10,19 +10,19 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Proventus</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Proventus-Solutions</title>
+    
 
     <!-- mobile specific metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <meta name="description" content="" >
     <meta name="theme-color" content="#39b54a">
+    <meta name="keywords" content="web, mobile, design, engineer, marketing, digital, solutions, development, websites, technology, proventus">
+    <meta name="description" content="Brief description of your webpage">
     <meta property="og:title" content="Proventus">
-
+    <meta property="og:description" content="Brief description of your webpage">
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="/assets/css/base.css">
@@ -155,7 +155,9 @@
 
             {% for link in links %}
             <li>
-                <a href="{{link.url}}"><i class="{{link.icon}}" aria-hidden="true"></i><span>{{link.name}}</span></a>
+                <a href="{{link.url}}"><i class="{{link.icon}}" aria-hidden="true"></i>
+                    {% comment %} <span>{{link.name}}</span> {% endcomment %}
+                </a>
             </li>
         {% endfor %}
 
@@ -251,28 +253,25 @@
 
     
 
-    <!-- contact
-    ================================================== -->
+
+
     <section id="contact" class="s-contact">
 
         <div class="overlay"></div>
         <div class="contact__line"></div>
 
-        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+        <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
                 <h3 class="subhead">Contact Us</h3>
                 <h1 class="display-2 display-2--light">Reach out for a new project or just say hello</h1>
             </div>
         </div>
 
-  
-
-
         <div class="row contact-content" data-aos="fade-up">
             
             <div class="contact-primary">
 
-                <h4 class="h4">Send Us A Message</h4>
+                <h3 class="h6">Send Us A Message</h3>
 
                 <form name="contactForm" id="contactForm"  novalidate="novalidate">
                     {% csrf_token %}
@@ -320,7 +319,8 @@
             <div class="contact-secondary">
                 <div class="contact-info">
 
-                    <h4 class="h4 hide-on-fullwidth">Contact Info</h4>
+                    <h3 class="h6 hide-on-fullwidth">Contact Info</h3>
+
 
                     <div class="cinfo">
                         <h5>Where to Find Us</h5>
@@ -334,67 +334,42 @@
                         <h5>Email Us At</h5>
                         <p>
                             {{company.email}}
-
                         </p>
                     </div>
+
+             
+
                     {% if company.phone %}
-                        <div class="cinfo">
-                            <h5>Call Us At</h5>
-                            <p>
-                                {{company.phone}}
-                            </p>
-                        </div>
-                    {% endif %}
-                  
+                    <div class="cinfo">
+                        <h5>Call Us At</h5>
+                        <p>
+                            {{company.phone}}
+                        </p>
+                    </div>
+                {% endif %}
 
                     <ul class="contact-social">
-
-                    {% for link in links %}
+                        {% for link in links %}
              
                         <li>
                             <a href="{{link.url}}"><i class="{{link.icon}}" aria-hidden="true"></i></a>
                         </li>
 
                     {% endfor %}
-            
                     </ul> <!-- end contact-social -->
 
                 </div> <!-- end contact-info -->
-            </div> 
+            </div> <!-- end contact-secondary -->
 
         </div> <!-- end contact-content -->
 
     </section> <!-- end s-contact -->
 
-
     <!-- footer
     ================================================== -->
     <footer>
 
-        {% comment %} <div class="row footer-main ">
-
-            <div class="col-six tab-full left footer-desc text-white">
-
-                <div class="footer-logo"></div>
-            {{company.about}}
-            </div>
-
-            <div class="col-six tab-full right footer-subscribe">
-
-                <h4>Get Notified</h4>
-                <p>Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt iusto porro.</p>
-
-                <div class="subscribe-form">
-                    <form id="mc-form" class="group" novalidate="true">
-                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
-                        <input type="submit" name="subscribe" value="Subscribe">
-                        <label for="mc-email" class="subscribe-message"></label>
-                    </form>
-                </div>
-
-            </div>
-
-        </div> {% endcomment %}
+  
 
         <div class="row footer-bottom">
 

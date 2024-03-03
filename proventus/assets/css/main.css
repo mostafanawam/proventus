@@ -228,14 +228,14 @@ a {
  * # typography & general theme styles
  * 
  * ------------------------------------------------------------------- */
-h1, h2, h3, h4, h5, h6, 
-.h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "montserrat-medium", sans-serif;
-    color: #000000;
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
+ h1, h2, h3, h4, h5, h6, 
+ .h1, .h2, .h3, .h4, .h5, .h6 {
+     font-family: "montserrat-medium", sans-serif;
+     color: #000000;
+     font-style: normal;
+     font-weight: normal;
+     text-rendering: optimizeLegibility;
+ }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     margin-top: 6rem;
@@ -738,19 +738,19 @@ select {
     display: block;
     height: 6rem;
     padding: 1.5rem 0;
-    /* border: 1px solid red; */
+    border: 0;
     outline: none;
     color: #333333;
     font-family: "montserrat-light", sans-serif;
     font-size: 1.4rem;
-    /* line-height: 3rem; */
+    line-height: 3rem;
     max-width: 100%;
-    background: white;
-    /* border-bottom: 2px solid rgba(0, 0, 0, 0.15); */
+    background: transparent;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    border-radius: 5px;
 }
+
 
 .cl-custom-select {
     position: relative;
@@ -2021,7 +2021,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 /* ------------------------------------------------------------------- 
  * ## home social 
  * ------------------------------------------------------------------- */
-.home-social {
+ .home-social {
     font-family: "montserrat-regular", sans-serif;
     list-style: none;
     margin: 0;
@@ -2049,7 +2049,6 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     width: 33px;
     height: 33px;
 }
-
 .home-social i, .home-social span {
     position: absolute;
     top: 0;
@@ -2059,19 +2058,19 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .home-social i {
-    font-size: 18px;
+    font-size: 14px;
     right: 0;
     text-align: center;
     display: inline-block;
     width: 33px;
     height: 33px;
-    /* line-height: calc(33px - 4px); */
+    line-height: calc(33px - 4px);
     border: 2px solid #FFFFFF;
     border-radius: 50%;
 }
 
 .home-social span {
-    color: var(--main);
+    color: #39b54a;
     right: 4.5rem;
     font-size: 1.3rem;
     opacity: 0;
@@ -3059,11 +3058,11 @@ html.no-csstransitions .home-content__main {
  * # contact 
  *
  * ------------------------------------------------------------------- */
-.s-contact {
-    background-color:black;
-    /* background-image: url("../images/contact-bg.jpg"); */
-    /* background-repeat: no-repeat;
-    background-position: center, center; */
+ .s-contact {
+    background-color: #151515;
+    background-image: url("../images/contact-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center, center;
     padding-top: 15rem;
     padding-bottom: 12rem;
     color: rgba(255, 255, 255, 0.5);
@@ -3077,7 +3076,7 @@ html.no-csstransitions .home-content__main {
     width: 100%;
     height: 100%;
     opacity: .8;
-    /* background-color: #151515; */
+    background-color: #151515;
 }
 
 .s-contact .form-field {
@@ -3102,7 +3101,7 @@ html.no-csstransitions .home-content__main {
     padding: 0 2rem;
     margin: 0;
     color: #FFFFFF;
-    background: var(--main);
+    background: #39b54a;
 }
 
 .s-contact .form-field label::after {
@@ -3113,7 +3112,7 @@ html.no-csstransitions .home-content__main {
     margin-top: -6px;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
-    border-right: 5px solid var(--main);
+    border-right: 5px solid #39b54a;
 }
 
 .contact__line {
@@ -3126,10 +3125,9 @@ html.no-csstransitions .home-content__main {
     top: -10.2rem;
     margin-left: -1px;
 }
-
 .contact-content {
     max-width: 1000px;
-    /* background-color: rgba(0, 0, 0, 0.2); */
+    background-color: rgba(0, 0, 0, 0.2);
     color: rgba(255, 255, 255, 0.4);
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -3139,7 +3137,7 @@ html.no-csstransitions .home-content__main {
     position: relative;
 }
 
-.contact-content h4 {
+.contact-content h3 {
     margin-top: 0;
     margin-bottom: 6.6rem;
     color: #FFFFFF;
@@ -3147,7 +3145,7 @@ html.no-csstransitions .home-content__main {
 
 .contact-content h5 {
     margin-top: 0;
-    color: var(--main);
+    color: #39b54a;
 }
 
 .contact-content input[type="email"],
@@ -3159,11 +3157,9 @@ html.no-csstransitions .home-content__main {
 .contact-content input[type="password"],
 .contact-content textarea,
 .contact-content select {
-    /* color: rgba(255, 255, 255, 0.6); */
-    color: black;
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.07); */
+    color: rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     margin-bottom: .9rem;
-    padding: 10px;
 }
 
 .contact-content input[type="email"]:focus,
@@ -3175,60 +3171,48 @@ html.no-csstransitions .home-content__main {
 .contact-content input[type="password"]:focus,
 .contact-content textarea:focus,
 .contact-content select:focus {
-    /* color: #FFFFFF; */
-    color: black;
-    border: 2px solid var(--main);
+    color: #FFFFFF;
+    border-bottom: 1px solid #39b54a;
 }
 
 .contact-content button,
 .contact-content .btn {
     margin-top: 3.6rem;
-    border-radius: 5px;
 }
 .contact-content input::-webkit-input-placeholder,
 .contact-content select::-webkit-input-placeholder,
 .contact-content textarea::-webkit-input-placeholder {
-    /* color: #4f4f4f; */
-     /* color: #FFFFFF; */
-     color: black;
+    color: #4f4f4f;
 }
 
 .contact-content input:-moz-placeholder,
 .contact-content select:-moz-placeholder,
 .contact-content textarea:-moz-placeholder {
-    /* color: #4f4f4f;   */
-      /* color: #FFFFFF; */
-      color: black;
-
+    color: #4f4f4f;    /* Firefox 18- */
 }
 
 .contact-content input::-moz-placeholder,
 .contact-content select::-moz-placeholder,
 .contact-content textarea::-moz-placeholder {
-
-       /* color: #FFFFFF; */
-       color: black;
+    color: #4f4f4f;    /* Firefox 19+ */
 }
 
 .contact-content input:-ms-input-placeholder,
 .contact-content select:-ms-input-placeholder,
 .contact-content textarea:-ms-input-placeholder {
-    /* color: #4f4f4f; */
-        /* color: #FFFFFF; */
-        color: black;
+    color: #4f4f4f;
 }
 
 .contact-content input.placeholder,
 .contact-content select.placeholder,
 .contact-content textarea.placeholder {
-    /* color: #4f4f4f !important; */
-       /* color: #FFFFFF; */
-       color: black; 
+    color: #4f4f4f !important;
 }
+
+
 .contact-primary, .contact-secondary {
     float: left;
     padding: 0 5rem;
-   
 }
 
 .contact-primary {
@@ -3241,8 +3225,6 @@ html.no-csstransitions .home-content__main {
 
 .contact-secondary {
     width: 35%;
-    background-color: var(--main) !important;
-
 }
 
 .contact-secondary::before {
@@ -3253,7 +3235,7 @@ html.no-csstransitions .home-content__main {
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: var(--main) !important;
+    background-color: #121212;
 }
 
 .contact-secondary .contact-info {
@@ -3264,14 +3246,6 @@ html.no-csstransitions .home-content__main {
     margin-bottom: 4.8rem;
 }
 
-.contact-secondary .cinfo h5{
-    color: black;
-
-}
-.contact-secondary .cinfo p{
-    color: white;
-
-}
 .contact-social {
     list-style: none;
     display: inline-block;
@@ -3285,14 +3259,16 @@ html.no-csstransitions .home-content__main {
     display: inline-block;
 }
 
+
 .contact-social li a {
-    color: black;
+    color: white;
 }
 
 .contact-social li a:hover, 
 .contact-social li a:focus {
-    color: white;
+    color: #39b54a;
 }
+
 
 .contact-social li:last-child {
     margin: 0;
@@ -3437,7 +3413,7 @@ html.no-csstransitions .home-content__main {
     }
     .contact-primary #contactForm {
         margin-top: -1.5rem;
-        margin-bottom: 2.2rem;
+        margin-bottom: 7.2rem;
     }
     .contact-secondary .hide-on-fullwidth {
         display: none;
@@ -3476,9 +3452,7 @@ html.no-csstransitions .home-content__main {
 
 @media only screen and (max-width: 400px) {
     .contact-primary, .contact-secondary {
-        padding: 15px;
-        /* margin-top: 15px;
-        margin-bottom: 150px; */
+        padding: 0 5px;
     }
 }
 
