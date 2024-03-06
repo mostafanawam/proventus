@@ -17,10 +17,15 @@ class ContactUs(models.Model):
         
 # python manage.py dumpdata main.Services --output main/fixtures/Services.test.json
 
+def upload_to(obj,filename):
+    return f"assets/services/{obj.title}/{filename}"
+
+
 class Services(models.Model):
     title = models.CharField(max_length=100,unique=True)
     description = models.TextField(null=True,blank=True)
-    icon=models.CharField(max_length=50)
+    # icon=models.CharField(max_length=50)
+    icon=models.ImageField(upload_to=upload_to)
     index=models.IntegerField(default=1)
 
     def __str__(self):

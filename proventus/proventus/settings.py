@@ -31,7 +31,8 @@ ALLOWED_HOSTS = [
     'proventus-solutions.com',
     'www.proventus-solutions.com',
     'https://www.proventus-solutions.com/',
-    'https://proventus-solutions.com/'
+    'https://proventus-solutions.com/',
+    '127.0.0.1'
 ]
 
 

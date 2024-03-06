@@ -5,7 +5,7 @@
     "fields": {
       "title": "Multimedia Design",
       "description": "Enhance brand visibility with captivating logos, branding, and digital art designed to engage your audience effectively.",
-      "icon": "fas fa-palette",
+      "icon": "",
       "index": 2
     }
   },
@@ -15,7 +15,7 @@
     "fields": {
       "title": "Digital Marketing",
       "description": "Boost your online presence with SEO, digital ads, email campaigns, and analytics for measurable results and increased visibility.",
-      "icon": "fas fa-rocket",
+      "icon": "",
       "index": 3
     }
   },
@@ -25,7 +25,7 @@
     "fields": {
       "title": "Digital Support & Insights",
       "description": "Boost productivity with remote assistance for digital tasks. Gain valuable insights through data analysis, driving informed decisions for business growth.",
-      "icon": "fas fa-laptop",
+      "icon": "",
       "index": 4
     }
   },
@@ -35,7 +35,7 @@
     "fields": {
       "title": "Engineering Solutions",
       "description": "Ensure precision in projects with accurate engineering drawings, including floor maps and basic & complex layouts. From construction to technical projects, our team delivers quality designs tailored to your needs.",
-      "icon": "fas fa-truck-pickup",
+      "icon": "",
       "index": 5
     }
   },
@@ -45,7 +45,7 @@
     "fields": {
       "title": "Web & App Development",
       "description": "Craft user-friendly websites and apps optimized for search engines, ensuring your online presence stands out.",
-      "icon": "fas fa-globe",
+      "icon": "",
       "index": 1
     }
   }

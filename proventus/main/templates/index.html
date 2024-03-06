@@ -240,27 +240,21 @@
             {% for service in services %}
                 <div class="col-block service-item" data-aos="fade-up">
                     <div class="service-icon">
-                        <i class="{{service.icon}}"></i>
+                        {% comment %} <i class="{{service.icon}}"></i> {% endcomment %}
+                        {% if service.icon %}
+                            <img src="{{ service.icon.url }}" alt="{{service.title}}"/>
+                        {% endif %}
                     </div>
                     <div class="service-text">
                         <h2 class="h2">{{service.title}}</h2>
-                        <p style="font-size:1.7rem">{{service.description}}
+                        <p style="font-size:1.7rem;line-height:2.5rem">{{service.description}}
                         </p>
                     </div>
                 </div>
             {% endfor %}
-          
-      
-
-
-    
-       
         </div> <!-- end services-list -->
 
     </section> <!-- end s-services -->
-
-
-    
 
 
 
