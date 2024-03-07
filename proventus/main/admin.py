@@ -19,7 +19,7 @@ admin.site.register(SocialLinks,SocialLinksAdmin)
 
 
 class SliderAdmin(admin.ModelAdmin):  
-    list_display = ("id","title",'text','index','text_color')
+    list_display = ("id","title",'text','index','types','text_color')
 admin.site.register(Slider,SliderAdmin)
 
 class CompanyAdmin(admin.ModelAdmin):  
