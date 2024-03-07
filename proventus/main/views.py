@@ -10,7 +10,7 @@ def main_page(request):
     sevices=Services.objects.all().order_by('index')
     company=Company.objects.first()
     links=SocialLinks.objects.all()
-    sliders=Slider.objects.all()
+    sliders=Slider.objects.all().order_by('index')
     context={
         "services":sevices,
         "company":company,
