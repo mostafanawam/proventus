@@ -141,15 +141,32 @@
             
         <div class="carousel-inner" role="listbox">
             {% for slider in sliders %}
-            {% if  slider.image %}
-                <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" style="background-image: url('{{slider.image.url}}')">
-            {% else %}
-                <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" style="background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
-            {% endif %}
+
+            {% if slider.types == "image" %}
+
+                {% if  slider.image %}
+                    <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" style="background-image: url('{{slider.image.url}}')" alt="{{slider.title}}">
+                {% endif %} 
+
               <div class="carousel-caption">
                 <h2 class="{{slider.text_color}}">{{slider.title}}</h2>
                 <p class="lead {{slider.text_color}}">{{slider.text}}</p>
-              </div>
+              </div> 
+
+            {% else %}
+                 <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
+                    <video  autoplay loop muted class="w-100" >
+                        <source src="{{slider.image.url}}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="carousel-caption">
+                        <h2 class="{{slider.text_color}}">{{slider.title}}</h2>
+                        <p class="lead {{slider.text_color}}">{{slider.text}}</p>
+                    </div> 
+
+            {% endif %}
+
+  
             </div>
         {% endfor %}
             

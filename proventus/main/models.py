@@ -93,7 +93,7 @@ class UserAccountManager(BaseUserManager):
 
 
 def upload_to(obj,filename):
-    return f"assets/slider/{obj.title}"
+    return f"assets/slider/{filename}"
 
 
 CHOICES_COLORS = [
@@ -101,14 +101,18 @@ CHOICES_COLORS = [
         ('text-black', 'Black'),
         ('text-white', 'White'),
 ]
-
+CHOICES_TYPES = [
+        ('video', 'video'),
+        ('image', 'image'),
+]
 class Slider(models.Model):
     title = models.CharField(max_length=100,unique=True)
     text = models.TextField(null=True,blank=True)
     # icon=models.CharField(max_length=50)
-    image=models.ImageField(upload_to=upload_to)
+    image=models.FileField(upload_to=upload_to)
     index=models.IntegerField(default=1)
     text_color=models.CharField(max_length=20,choices=CHOICES_COLORS,default="text-black")
+    types=models.CharField(max_length=20,choices=CHOICES_TYPES,default="image")
 
     def __str__(self):
         return self.title
