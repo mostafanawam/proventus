@@ -3,15 +3,19 @@ from django.shortcuts import render
 from .models import *
 from django.http import JsonResponse
 
+def test_page(request):
+    return render(request, 'test.html')
 
 def main_page(request):
     sevices=Services.objects.all().order_by('index')
     company=Company.objects.first()
     links=SocialLinks.objects.all()
+    sliders=Slider.objects.all()
     context={
         "services":sevices,
         "company":company,
-        "links":links
+        "links":links,
+        "sliders":sliders
     }
     return render(request, 'index.html', context)
 

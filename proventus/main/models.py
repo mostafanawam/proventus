@@ -92,7 +92,21 @@ class UserAccountManager(BaseUserManager):
 
 
 
+def upload_to(obj,filename):
+    return f"assets/slider/{filename}"
 
+
+class Slider(models.Model):
+    title = models.CharField(max_length=100,unique=True)
+    text = models.TextField(null=True,blank=True)
+    # icon=models.CharField(max_length=50)
+    image=models.ImageField(upload_to=upload_to)
+
+    def __str__(self):
+        return self.title
+    
+    class Meta:
+        verbose_name_plural = "Slider"
 
 
 

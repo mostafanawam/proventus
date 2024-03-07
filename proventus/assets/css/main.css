@@ -92,67 +92,6 @@ body {
  * ------------------------------------------------------------------- */
 /* Reset some default styling */
 
-/* Navbar styling */
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 15px;
-
-  }
-  
-  .container {
-    max-width: 1500px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-  }
-  
-
-  
-  .nav {
-    list-style: none;
-    margin : 0;
-    padding: 0;
-    z-index: 505;
-    
-  }
-  
-  .nav li {
-    display: inline-block;
-    margin-right: 20px;
-    margin-top: 15px;
-  }
-  
-  .nav a {
-    text-align: center;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  /* .nav a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -20px; 
-    width: 0;
-    height: 3px; 
-    background-color: var(--main);
-    transition: width 0.4s ease; 
-  }
-  
-  .nav a:hover::after {
-    width: 100%; 
-  } */
-  
-  .nav a:hover {
-    color: var(--main); 
-  }
 
 
 .display-small{
@@ -166,10 +105,7 @@ body {
     .display-small{
         display: block;
     }
-    .navbar{
-        display: none;
-    }
-
+ 
     
 }
   
@@ -3779,3 +3715,45 @@ footer .row {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
+
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  #mainNavbar{
+      padding-left:  50px;
+      padding-top: 20px;
+  }
+  
+
+  
+  .navbar.scrolled {
+      background: rgb(34, 31, 31);
+      transition: background 500ms;
+  }
+  
+  .font-weight-light{
+      font-family: 'Source Serif Pro', serif;
+  }
+  @media only screen and (max-width: 600px) {
+    .carousel-item {
+        height: 90vh;
+
+    }
+  
+}
+
+
+
+
+

@@ -18,6 +18,9 @@ class SocialLinksAdmin(admin.ModelAdmin):
 admin.site.register(SocialLinks,SocialLinksAdmin)
 
 
+class SliderAdmin(admin.ModelAdmin):  
+    list_display = ("id","title",)
+admin.site.register(Slider,SliderAdmin)
 
 class CompanyAdmin(admin.ModelAdmin):  
     list_display = ("id","address",'phone',"email")
