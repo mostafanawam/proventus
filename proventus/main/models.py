@@ -115,7 +115,7 @@ class Slider(models.Model):
     types=models.CharField(max_length=20,choices=CHOICES_TYPES,default="image")
 
     def __str__(self):
-        return self.title
+        return f"slider-{self.pk}"
     
     class Meta:
         verbose_name_plural = "Slider"
