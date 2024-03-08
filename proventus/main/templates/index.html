@@ -149,8 +149,12 @@
                 {% endif %} 
 
               <div class="carousel-caption">
-                <h2 class="{{slider.text_color}}">{{slider.title}}</h2>
-                <p class="lead {{slider.text_color}}">{{slider.text}}</p>
+                {% if slider.title %}
+                 <h2 class="{{slider.text_color}}">{{slider.title}}</h2>
+                {% endif %}
+                {% if  slider.text%}
+                    <p class="lead {{slider.text_color}}">{{slider.text}}</p>
+                {% endif %}
               </div> 
 
             {% else %}
