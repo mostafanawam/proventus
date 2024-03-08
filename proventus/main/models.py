@@ -106,7 +106,7 @@ CHOICES_TYPES = [
         ('image', 'image'),
 ]
 class Slider(models.Model):
-    title = models.CharField(max_length=100,unique=True)
+    title = models.CharField(max_length=100,unique=True,null=True,blank=True)
     text = models.TextField(null=True,blank=True)
     # icon=models.CharField(max_length=50)
     image=models.FileField(upload_to=upload_to)
