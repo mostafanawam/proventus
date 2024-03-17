@@ -91,9 +91,13 @@ class UserAccountManager(BaseUserManager):
 
 
 
-
+import os
 def upload_to(obj,filename):
-    return f"assets/slider/{filename}"
+    base_filename = os.path.basename(filename)
+    file_name, file_extension = os.path.splitext(base_filename)
+    print(file_extension)
+    print(file_name)
+    return f"assets/slider/{obj.types}-{obj.index}{file_extension}"
 
 
 CHOICES_COLORS = [
