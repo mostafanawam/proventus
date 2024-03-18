@@ -3380,8 +3380,6 @@ footer {
      
     font-size: 15px;
     line-height: 2;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.3);
 }
 
 footer h4 {
@@ -3564,10 +3562,13 @@ footer .row {
 .go-top a i, .go-top a:visited i {
     font-size: 22px;
     line-height: inherit;
+    
 }
 
 .go-top a:hover, .go-top a:focus {
     color: #FFFFFF;
+    text-decoration: none;
+
 }
 
 
@@ -3680,13 +3681,18 @@ footer .row {
 }
 
 .to-top2 a:hover, .to-top2 a:focus {
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    text-decoration: none;
+    color: black;
+
 }
 
 @media only screen and (max-width: 600px) {
     .to-top2 {
         bottom: 30px;
         right: 30px;
+        text-decoration: none;
+
     }
 }
 

@@ -196,7 +196,8 @@ MEDIA_URL = '/assets/'
 
 # CELERY_broker_connection_retry_ON_STARTUP = True
 
-
+# DATA_UPLOAD_MAX_MEMORY_SIZE
+# FILE_UPLOAD_MAX_MEMORY_SIZE
 
 
 
