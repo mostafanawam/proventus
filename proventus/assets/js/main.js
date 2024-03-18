@@ -283,9 +283,9 @@
    var clSmoothScroll = function() {
         
     $('.smoothscroll').on('click', function (e) {
-        // var target = this.hash,
-        // $target    = $(target);
-        var $target = $('#mainNavbar');
+        var target = this.hash,
+        $target    = $(target);
+        
             e.preventDefault();
             e.stopPropagation();
 
@@ -298,11 +298,11 @@
                 $('.header-menu-toggle').trigger('click');
             }
 
-            // window.location.hash = target;
+            window.location.hash = target;
         });
     });
 
-    };
+};
 
 
 /*document.addEventListener('DOMContentLoaded', function() {
