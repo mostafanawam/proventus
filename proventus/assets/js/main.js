@@ -415,7 +415,7 @@
             easing: 'ease-in-sine',
             delay: 300,
             once: true,
-            disable: 'mobile'
+            disable: ''
         });
 
     };
@@ -581,38 +581,14 @@
         fadeOutTime = 400,         // how slow/fast you want the button to hide
         scrollSpeed = 300,         // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
         goTopButton = $(".go-top")
-        
 
 
-
-        // Show or hide the sticky footer button
-        $(window).on('scroll', function() {
-
-
-            var sectionOffsetTop = $('#services').offset().top;
-            
-
+         // Show or hide the sticky footer button
+         $(window).on('scroll', function() {
             if ($(window).scrollTop() >= pxShow) {
                 goTopButton.fadeIn(fadeInTime);
-                // goTopButton.addClass('red'); // Change to your desired color
-
-                var scrollPosition = $(window).scrollTop();
-    
-                if (scrollPosition >= sectionOffsetTop) {
-                    goTopButton.removeClass("go-top")
-
-                    goTopButton.addClass("to-top2");
-
-                }else{
-                    goTopButton.addClass("go-top")
-
-                    goTopButton.removeClass("to-top2");
-                } 
-
-
             } else {
                 goTopButton.fadeOut(fadeOutTime);
-
             }
         });
     };
