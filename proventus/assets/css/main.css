@@ -99,7 +99,9 @@ body {
     display: none;
 }
 
-
+.bg-black{
+    background-color: #111111;
+}
 
 /* Small screens (sm) */
 @media only screen and (max-width: 768px) {
