@@ -18,7 +18,10 @@ class ContactUs(models.Model):
 # python manage.py dumpdata main.Services --output main/fixtures/Services.test.json
 
 def upload_to(obj,filename):
-    return f"assets/services/{obj.title}/{filename}"
+    base_filename = os.path.basename(filename)
+    file_name, file_extension = os.path.splitext(base_filename)
+    return f"services/{obj.title}-{obj.index}{file_extension}"  
+  
 
 
 class Services(models.Model):
@@ -95,9 +98,7 @@ import os
 def upload_to(obj,filename):
     base_filename = os.path.basename(filename)
     file_name, file_extension = os.path.splitext(base_filename)
-    print(file_extension)
-    print(file_name)
-    return f"assets/slider/{obj.types}-{obj.index}{file_extension}"
+    return f"slider/{obj.types}-{obj.index}{file_extension}"
 
 
 CHOICES_COLORS = [
