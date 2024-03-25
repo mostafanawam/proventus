@@ -182,5 +182,5 @@ package-lock.json
 **/gallery
 **/brands
 
-**/assets/services
+# **/assets/services
 **/assets/slider

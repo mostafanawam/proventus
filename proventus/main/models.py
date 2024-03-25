@@ -22,7 +22,7 @@ def upload_to(obj,filename):
     return f"services/{obj.title}-{obj.index}{file_extension}"  
   
 
-# python manage.py dumpdata main.Services --output main/fixtures/Services.test.json
+# python manage.py dumpdata main.Services --output main/fixtures/Services.static.json
 class Services(models.Model):
     title = models.CharField(max_length=100,unique=True)
     description = models.TextField(null=True,blank=True)
