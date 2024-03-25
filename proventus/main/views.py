@@ -37,7 +37,7 @@ def contactUs(request):
                 subject,  # Subject of the email
                 message,  # Message of the email
                 settings.EMAIL_HOST_USER,  # Sender's email address
-                [settings.EMAIL_HOST_USER],  # List of recipient(s)
+                [settings.EMAIL_RECEIVER],  # List of recipient(s)
                 fail_silently=False,  # Set to True to suppress exceptions
             )
             contact_us=ContactUs.objects.create(
