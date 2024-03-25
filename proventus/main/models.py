@@ -15,7 +15,6 @@ class ContactUs(models.Model):
         verbose_name = "Contact Us"
         verbose_name_plural = "Contact Us"
         
-# python manage.py dumpdata main.Services --output main/fixtures/Services.test.json
 
 def upload_to(obj,filename):
     base_filename = os.path.basename(filename)
@@ -23,7 +22,7 @@ def upload_to(obj,filename):
     return f"services/{obj.title}-{obj.index}{file_extension}"  
   
 
-
+# python manage.py dumpdata main.Services --output main/fixtures/Services.test.json
 class Services(models.Model):
     title = models.CharField(max_length=100,unique=True)
     description = models.TextField(null=True,blank=True)
@@ -110,6 +109,10 @@ CHOICES_TYPES = [
         ('video', 'video'),
         ('image', 'image'),
 ]
+
+
+# python manage.py dumpdata main.Slider --output main/fixtures/Slider.test.json
+
 class Slider(models.Model):
     title = models.CharField(max_length=100,unique=True,null=True,blank=True)
     text = models.TextField(null=True,blank=True)
