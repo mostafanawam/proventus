@@ -1,1 +1,27 @@
-[{"model": "main.slider", "pk": 1, "fields": {"title": null, "text": "", "image": "slider/image-1_Y7JNNYl.jpg", "index": 1, "text_color": "text-black", "types": "image"}}, {"model": "main.slider", "pk": 2, "fields": {"title": null, "text": "", "image": "slider/video-2_ONb62Ff.webm", "index": 2, "text_color": "text-black", "types": "video"}}]
+
+[
+  {
+    "model": "main.slider",
+    "pk": 1,
+    "fields": {
+      "title": null,
+      "text": "",
+      "image": "slider/image-1_Y7JNNYl.jpg",
+      "index": 1,
+      "text_color": "text-black",
+      "types": "image"
+    }
+  },
+  {
+    "model": "main.slider",
+    "pk": 2,
+    "fields": {
+      "title": null,
+      "text": "",
+      "image": "slider/video-2_ONb62Ff.webm",
+      "index": 2,
+      "text_color": "text-black",
+      "types": "video"
+    }
+  }
+]
