@@ -116,7 +116,7 @@ if(DATABASE_NAME=="postgres"):
             'PASSWORD': POSTGRES_PASSWORD,
             'HOST': POSTGRES_HOST,
             'PORT': POSTGRES_PORT,
-            'CONN_MAX_AGE': 20,
+            'CONN_MAX_AGE': 0,
         }
     }
     MIGRATION_MODULES={
