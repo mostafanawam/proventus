@@ -99,15 +99,19 @@ DATABASES = {
 # docker exec -it 8aa5ff5200ea /bin/bash
 # psql -U postgres -d postgres
 
-DATABASE_NAME=os.getenv('DATABASE_NAME','sqlite')
+DATABASE_TYPE=os.getenv('DATABASE_TYPE','sqlite')
 POSTGRES_HOST=os.getenv("POSTGRES_HOST", "127.0.0.1")
-POSTGRES_PASSWORD=os.getenv("POSTGRES_PASSWORD", "postgres")
-POSTGRES_USER=os.getenv("POSTGRES_USER", "postgres")
-POSTGRES_NAME=os.getenv("POSTGRES_NAME", "postgres")
+POSTGRES_PASSWORD=os.getenv("POSTGRES_PASSWORD", "postgres1")
+POSTGRES_USER=os.getenv("POSTGRES_USER", "postgres1")
+POSTGRES_NAME=os.getenv("POSTGRES_NAME", "proventus")
 POSTGRES_PORT=os.getenv("POSTGRES_PORT", "5432")
 POSTGRES_ENGINE=os.getenv("POSTGRES_ENGINE", 'django.db.backends.postgresql')
 
-if(DATABASE_NAME=="postgres"):
+
+
+
+
+if(DATABASE_TYPE=="postgres"):
     DATABASES = {
         'default': {
         'ENGINE': POSTGRES_ENGINE,
