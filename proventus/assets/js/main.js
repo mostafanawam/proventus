@@ -464,6 +464,8 @@
             var email = $("#contactEmail").val();
             var subject = $("#contactSubject").val();
             var message = $("#contactMessage").val();
+            var phone = $("#contactPhone").val();
+
            
         
             function isValidEmail(email) {
@@ -524,6 +526,7 @@
                     'email': email,
                     'subject': subject,
                     'message': message,
+                    'phone':phone
                 },
                 headers: {
                     'Origin': 'https://www.proventus-solutions.com'
@@ -543,6 +546,7 @@
                         $("#contactEmail").val("");
                         $("#contactSubject").val("");
                         $("#contactMessage").val("");
+                        $("#contactPhone").val("");
                 
                     }
                     else {

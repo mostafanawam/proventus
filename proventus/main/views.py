@@ -23,47 +23,45 @@ def main_page(request):
 from django.core.mail import send_mail
 def contactUs(request):
     if request.method == 'POST':
+        print(request.POST)
         fullname = request.POST['fullname']
         email = request.POST['email']
         subject = request.POST['subject']
-        message = request.POST['message']
-        if(fullname=="" or email=="" or subject=="" or message==""):
+        client_message = request.POST['message']
+        phone = request.POST['phone']
+        print(phone)
+        if(fullname=="" or email=="" or subject=="" or client_message==""):
             context={
                 "result":'error',
                 "msg":"Please fill all fields!!"
             }
         else:
-            send_mail(
-                subject,  # Subject of the email
-                message,  # Message of the email
-                settings.EMAIL_HOST_USER,  # Sender's email address
-                [settings.EMAIL_RECEIVER],  # List of recipient(s)
-                fail_silently=False,  # Set to True to suppress exceptions
-            )
             contact_us=ContactUs.objects.create(
                 name=fullname,
                 email=email,
                 subject=subject,
-                message=message
+                message=client_message,
+                phone=phone
             )
-        # try:
-        #     settings=Settings.objects.get()
-        #     html_message=f"""
-        #         <h3>Hello Dear, <br> 
-        #         You have a new message from {fullname} having the email: {email}<br>
-        #         message subject:{subject} <br>
-        #         Message content:{message}<br>
-        #         <a style="color:#83B641" href="{settings.admin_link}/home/contactus/{contact_us.pk}/change/" >Click here</a> for more details
-        #         </h3>
-        #     """
-        #     send_email(f"New Message from {fullname}",html_message,settings.reciever_email)
-        # except Exception as e:
-        #     print(f"email didnt send,{e}")
+            html_message=f"""
+                <h3>Dear Mr.Mustafa Hassan,</h3>
+                You have a new message from {fullname} having the email: {email}<br>
+                message subject:{subject} <br>
+                Message content:{client_message}<br>
+                <a style="color:#83B641" href="https://www.proventus-solutions.com/admin/main/contactus/{contact_us.pk}/change/" >Click here</a> for more details
+            """
+            send_mail(
+                f"Message from {fullname}",  # Subject of the email
+                html_message,  # Message of the email
+                settings.EMAIL_HOST_USER,  # Sender's email address
+                [settings.EMAIL_RECEIVER],  # List of recipient(s)
+                fail_silently=False,  # Set to True to suppress exceptions
+                html_message=html_message
+            )
 
             context={
                 "result":'success',
                 "msg":"message sent"
-
             }
         return JsonResponse(context)
  
