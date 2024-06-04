@@ -43,6 +43,7 @@ class Company(models.Model):
     address = models.TextField()
     phone=models.CharField(max_length=50,null=True,blank=True)
     email=models.EmailField()
+    register_number=models.CharField(max_length=50,null=True,blank=True)
     def clean(self):
         if Company.objects.exists() and not self.pk:
             raise ValidationError("You can only have one settings instance")

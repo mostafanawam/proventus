@@ -181,6 +181,8 @@ package-lock.json
 **/products
 **/gallery
 **/brands
+**/services
 
 # **/assets/services
 **/assets/slider
+**/assets/services

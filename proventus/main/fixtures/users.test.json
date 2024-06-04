@@ -5,7 +5,7 @@
             "is_superuser": true,
             "username":"mostafa",
             "email": "hello@proventus-solutions.com",
-            "password": "pbkdf2_sha256$600000$bBg8NlgPTjUTLcJRzJmwLs$moN0x43S/+vI43gaDbHJmtlIq89UpvTVJicBzmqqWfg=",
+            "password": "pbkdf2_sha256$600000$mP2P4W6oq9vTs5aSeyQi3s$ue7vLDh3/jkp8p678i1i0qHnCGvUVcWvipgT0+W/SrY=",
             "is_staff": true,
             "is_enabled": true,
             "groups": [],

@@ -2449,7 +2449,7 @@ html.no-csstransitions .home-content__main {
 .services-list .service-icon {
     float: left;
     color: var(--main);
-    font-size: 4.8rem;
+    /* font-size: 4.8rem; */
     margin-top: -.6rem;
 }
 

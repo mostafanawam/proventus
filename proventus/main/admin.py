@@ -23,7 +23,7 @@ class SliderAdmin(admin.ModelAdmin):
 admin.site.register(Slider,SliderAdmin)
 
 class CompanyAdmin(admin.ModelAdmin):  
-    list_display = ("id","address",'phone',"email")
+    list_display = ("id","address",'phone',"register_number","email")
 admin.site.register(Company,CompanyAdmin)
 
 

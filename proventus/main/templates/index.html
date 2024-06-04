@@ -283,23 +283,27 @@
             
             <div class="contact-primary">
 
-                <h3 class="h3">Send Us A Message</h3>
+                <h3 class="h3">Get a Quote</h3>
 
                 <form name="contactForm" id="contactForm"  novalidate="novalidate">
                     {% csrf_token %}
                     <fieldset>
     
                     <div class="form-field">
-                        <input name="contactName" type="text" id="contactName" placeholder="Your Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                        <input name="contactName" type="text" id="contactName" placeholder="Your Name *" value="" minlength="2" required="" aria-required="true" class="full-width">
                     </div>
                     <div class="form-field">
-                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email" value="" required="" aria-required="true" class="full-width">
+                        <input name="contactPhone" type="tel" id="contactPhone" placeholder="Phone" value="" class="full-width">
+                    </div>
+
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Your Email *" value="" required="" aria-required="true" class="full-width">
                     </div>
                     <div class="form-field">
-                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject *" value="" class="full-width">
                     </div>
                     <div class="form-field">
-                        <textarea name="contactMessage" id="contactMessage" placeholder="Your Message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                        <textarea name="contactMessage" id="contactMessage" placeholder="Your Message *" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
                     </div>
                     <div class="form-field">
                         <button class="full-width btn--primary"  type="button" id="submitContact">Submit</button>
@@ -331,16 +335,16 @@
             <div class="contact-secondary">
                 <div class="contact-info">
 
-                    <h3 class="h3 hide-on-fullwidth">Contact Info</h3>
+                    {% comment %} <h3 class="h3 hide-on-fullwidth">Contact Info</h3> {% endcomment %}
 
-
+{% comment %} 
                     <div class="cinfo">
                         <h5>Where to Find Us</h5>
                         <p>
                             {{company.address}}
 
                         </p>
-                    </div>
+                    </div> {% endcomment %}
 
                     <div class="cinfo">
                         <h5>Email Us At</h5>
@@ -349,16 +353,21 @@
                         </p>
                     </div>
 
-             
 
-                    {% if company.phone %}
                     <div class="cinfo">
                         <h5>Call Us At</h5>
                         <p>
                             {{company.phone}}
                         </p>
                     </div>
-                {% endif %}
+
+                    <div class="cinfo">
+                        <h5>Registration Info</h5>
+                        <p>
+                            {{company.register_number}},  England
+                        </p>
+                    </div>
+
 
                     <ul class="contact-social">
                         {% for link in links %}
