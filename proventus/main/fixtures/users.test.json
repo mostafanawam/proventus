@@ -1,15 +1,16 @@
-[{
-        "model": "main.user",
-        "pk": 1,
-        "fields": {
-            "is_superuser": true,
-            "username":"mostafa",
-            "email": "hello@proventus-solutions.com",
-            "password": "pbkdf2_sha256$600000$mP2P4W6oq9vTs5aSeyQi3s$ue7vLDh3/jkp8p678i1i0qHnCGvUVcWvipgT0+W/SrY=",
-            "is_staff": true,
-            "is_enabled": true,
-            "groups": [],
-            "user_permissions": []
-        }
+[
+  {
+    "model": "main.user",
+    "pk": 1,
+    "fields": {
+      "is_superuser": true,
+      "username": "mostafa",
+      "email": "hello@proventus-solutions.com",
+      "password": "pbkdf2_sha256$600000$mP2P4W6oq9vTs5aSeyQi3s$ue7vLDh3/jkp8p678i1i0qHnCGvUVcWvipgT0+W/SrY=",
+      "is_staff": true,
+      "is_enabled": true,
+      "groups": [],
+      "user_permissions": []
     }
+  }
 ]

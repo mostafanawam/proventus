@@ -212,15 +212,13 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = "587"       
 EMAIL_HOST_USER=os.getenv("EMAIL_HOST_USER", "hello@proventus-solutions.com")     
 EMAIL_HOST_PASSWORD=os.getenv("EMAIL_HOST_PASSWORD", "tcfw rawr tktk unln" )     
-EMAIL_RECEIVER=os.getenv("EMAIL_RECEIVER", "hello@proventus-solutions.com")     
+EMAIL_RECEIVER=os.getenv("EMAIL_RECEIVER", "mostafanawam44@gmail.com")     
 
 
 
 CORS_ALLOWED_ORIGINS = [
     "https://www.proventus-solutions.com",
-        'https://proventus-solutions.com'
-
-    
+    'https://proventus-solutions.com'
 ]
 
 CSRF_TRUSTED_ORIGINS=CORS_ALLOWED_ORIGINS

@@ -33,8 +33,16 @@
 
     <meta name="theme-color" content="#111111">
     <meta name="keywords" content="web, mobile, design, engineer, marketing, digital, solutions, development, websites, technology, proventus">
-    <meta name="description" content="Brief description of your webpage">
-    <meta property="og:description" content="Brief description of your webpage">
+    <meta name="description" content="software company1">
+
+
+
+    <meta property="og:image" content="/assets/logo/logo-white.webp">
+    <meta property="og:url" content="https://www.proventus-solutions.com/">
+    <meta property="og:type" content="website">
+
+
+    <meta property="og:description" content="software company1">
     <meta property="og:title" content="Proventus-Solutions">
     <!-- CSS
     ================================================== -->
@@ -364,7 +372,7 @@
                     <div class="cinfo">
                         <h5>Registration Info</h5>
                         <p>
-                            {{company.register_number}},  England
+                            {{company.register_number}}, England
                         </p>
                     </div>
 
@@ -471,6 +479,23 @@
     </div>
 
 
+    
+
+    
+
+    <div class="cookie-consent-banner d-none ">
+        <div style="font-size: 1.4rem;">
+            We use cookies to ensure you get the best experience on our website. By clicking "Accept", you consent to our use of cookies.
+        </div>
+        <div class="btn-group">
+            <button class="btn btn--primary  accept-cookies m-md-3">Accept</button>
+            <button class="btn btn-danger   reject-cookies">Reject</button>
+        </div>
+    </div>
+
+
+
+
     <!-- Java Script
     ================================================== -->
     <script src="/assets/js/jquery-3.2.1.min.js" defer></script>
@@ -485,6 +510,52 @@
     ================================================== -->
     <script src="/assets/js/modernizr.js"></script>
     <script src="/assets/js/pace.min.js"></script>
+
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.querySelector('.cookie-consent-banner');
+            const acceptButton = document.querySelector('.accept-cookies');
+            const rejectButton = document.querySelector('.reject-cookies');
+            
+            // Check if the cookie consent has already been set
+            if (!getCookie('cookie_consent')) {
+                cookieBanner.classList.remove('d-none');
+            }
+
+            acceptButton.addEventListener('click', function() {
+                setCookie('cookie_consent', 'accepted', 365);
+                cookieBanner.classList.add('d-none');
+            });
+
+            rejectButton.addEventListener('click', function() {
+                setCookie('cookie_consent', 'rejected', 365);
+                cookieBanner.classList.add('d-none');
+            });
+
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(';');
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+        });
+      </script>
+
+      
 </body>
 
 </html>
