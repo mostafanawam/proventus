@@ -5,7 +5,7 @@
     "fields": {
       "title": "Multimedia Design",
       "description": "Enhance brand visibility with captivating logos, branding, and digital art designed to engage your audience effectively.",
-      "icon": "services/Multimedia Design-2.png",
+      "icon": "services/Multimedia_Design-2.png",
       "index": 2
     }
   },
@@ -15,7 +15,7 @@
     "fields": {
       "title": "Digital Marketing",
       "description": "Boost your online presence with SEO, digital ads, email campaigns, and analytics for measurable results and increased visibility.",
-      "icon": "services/Digital Marketing-3.png",
+      "icon": "services/Digital_Marketing-3.png",
       "index": 3
     }
   },
@@ -25,7 +25,7 @@
     "fields": {
       "title": "Digital Support & Insights",
       "description": "Boost productivity with remote assistance for digital tasks. Gain valuable insights through data analysis, driving informed decisions for business growth.",
-      "icon": "services/Digital Support & Insights-4.png",
+      "icon": "services/Digital_Support__Insights-4.png",
       "index": 4
     }
   },
@@ -35,7 +35,7 @@
     "fields": {
       "title": "Engineering Solutions",
       "description": "Ensure precision in projects with accurate engineering drawings, including floor maps and basic & complex layouts. From construction to technical projects, our team delivers quality designs tailored to your needs.",
-      "icon": "services/Engineering Solutions-5.png",
+      "icon": "services/Engineering_Solutions-5.png",
       "index": 5
     }
   },
@@ -45,7 +45,7 @@
     "fields": {
       "title": "Web & App Development",
       "description": "Craft user-friendly websites and apps optimized for search engines, ensuring your online presence stands out.",
-      "icon": "services/Web & App Development-1.png",
+      "icon": "services/Web__App_Development-1.png",
       "index": 1
     }
   }

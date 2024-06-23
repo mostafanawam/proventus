@@ -256,7 +256,6 @@
             {% for service in services %}
                 <div class="col-block service-item" data-aos="fade-up">
                     <div class="service-icon">
-                        {% comment %} <i class="{{service.icon}}"></i> {% endcomment %}
                         {% if service.icon %}
                             <img src="{{ service.icon.url }}" alt="{{service.title}}"/>
                         {% endif %}
