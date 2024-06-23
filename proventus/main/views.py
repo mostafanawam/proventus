@@ -29,7 +29,6 @@ def contactUs(request):
         subject = request.POST['subject']
         client_message = request.POST['message']
         phone = request.POST['phone']
-        print(phone)
         if(fullname=="" or email=="" or subject=="" or client_message==""):
             context={
                 "result":'error',
@@ -44,11 +43,29 @@ def contactUs(request):
                 phone=phone
             )
             html_message=f"""
-                <h3>Dear Mr.Mustafa Hassan,</h3>
-                You have a new message from {fullname} having the email: {email}<br>
-                message subject:{subject} <br>
-                Message content:{client_message}<br>
-                <a style="color:#83B641" href="https://www.proventus-solutions.com/admin/main/contactus/{contact_us.pk}/change/" >Click here</a> for more details
+             <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 20px;">
+    <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <div style="background-color: #39b54a; color: #ffffff; padding: 10px; border-radius: 8px 8px 0 0; text-align: center;">
+            <h3 style="margin: 0;">New Message Notification</h3>
+        </div>
+        <div style="margin-top: 20px;">
+            <p>Dear Mr. Mustafa Hassan,</p>
+            <p>You have a new message from <strong>{fullname}</strong> having the email: <strong>{email}</strong>.</p>
+            <p><strong>Message Subject:</strong> {subject}</p>
+            <p><strong>Message Content:</strong></p>
+            <p>{client_message}</p>
+            <p style="text-align: center;">
+                <a href="https://www.proventus-solutions.com/admin/main/contactus/{contact_us.pk}/change/" 
+                   style="display: inline-block; background-color: #39b54a; color: #ffffff; padding: 10px 20px; text-decoration: none; border-radius: 5px; margin-top: 20px;">
+                   Click here for more details
+                </a>
+            </p>
+        </div>
+        <div style="margin-top: 20px; font-size: 12px; color: #888888; text-align: center;">
+            <p>This is an automated message. Please do not reply directly to this email.</p>
+        </div>
+    </div>
+</body>
             """
             send_mail(
                 f"Message from {fullname}",  # Subject of the email
